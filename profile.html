@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Abdullah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using custom animations for dynamic element entrances */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Media queries for responsive typography and navigation layout */
+        @media (max-width: 640px) { /* Mobile */
+            nav {
+                display: block; /* Stack navigation links vertically */
+                text-align: center; /* Center align navigation */
+            }
+            nav a {
+                display: block; /* Each link occupies full width */
+                margin: 5px 0; /* Spacing between links */
+            }
+            h1 {
+                font-size: 1.5rem; /* Smaller heading on mobile */
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
+            h1 {
+                font-size: 2.5rem; /* Medium heading on tablets */
+            }
+        }
+
+        @media (min-width: 1025px) { /* Desktop */
+            h1 {
+                font-size: 3rem; /* Larger heading on desktops */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-300 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-4"> <!-- Centers content and adds vertical spacing -->
+        <header class="flex items-center justify-between animate-fadeIn"> <!-- Flexbox for horizontal alignment and spacing -->
+            <div class="flex items-center space-x-2"> <!-- Flexbox for logo and name alignment -->
+                <div class="w-6 h-6 bg-blue-500 rounded-full"></div> <!-- Decorative blue circle for branding -->
+                <span class="text-xl font-bold text-gray-800">Abdullah Mansoor</span> <!-- Site title with bold styling -->
+            </div>
+            <!-- Consistent navigation bar with all pages linked -->
+            <nav class="flex flex-wrap justify-center space-x-4"> <!-- Flexbox for responsive navigation layout -->
+                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Home</a>
+                <a href="profile.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Profile</a>
+                <a href="goals.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Career Goals</a>
+                <a href="projects.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Projects</a>
+                <a href="skills.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Skills & Interests</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Profile content with gradient background in the About Me container -->
+        <div class="grid md:grid-cols-2 gap-4 items-center"> <!-- Grid layout for responsive two-column design -->
+            <div class="animate-fadeIn"> <!-- Applies fade-in animation to the profile image -->
+                <img src="profilephoto.jpg" alt="Abdullah Mansoor Portrait" class="rounded-lg shadow-xl"> <!-- Profile image with rounded corners and shadow for emphasis -->
+            </div>
+            <div class="space-y-4 animate-slideIn p-6 rounded-lg bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100"> <!-- Container with spacing, padding, rounded corners, gradient background, and slide-in animation -->
+                <h1 class="text-4xl font-bold text-gray">About Me</h1> <!-- Main heading with large, bold text -->
+                <p class="text-gray">
+                    I am a passionate Software Engineer, specializing in developing scalable web applications using the MERN (MongoDB, Express.js, React, Node.js) stack and Spring Boot. My academic journey has equipped me with a solid foundation in full-stack development, enabling me to design and implement robust solutions that address complex real-world challenges. I am particularly interested in creating user-centric applications that enhance user experience and streamline business processes.
+                </p>
+                <p class="text-gray">
+                    Beyond my academic pursuits, I actively participate in diverse projects that range from developing dynamic web platforms to experimenting with emerging technologies like blockchain and machine learning. My commitment to continuous learning drives me to contribute to open-source communities, where I collaborate with developers worldwide to build innovative tools and frameworks. These experiences not only sharpen my technical skills but also foster a strong sense of community and teamwork.
+                </p>
+                <p class="text-gray">
+                    I completed my Matriculation and FSC from APSACS Jhelum Campus, achieving A+ grades in both. My academic performance reflects my dedication and ability to grasp complex concepts efficiently. During my time at APSACS, I actively participated in various extracurricular activities, including coding clubs and tech workshops, which sparked my interest in software development and laid the groundwork for my future endeavors in the tech industry.
+                </p>    
+                <!-- Social links with animations for interaction -->
+                <div class="flex space-x-4"> <!-- Flexbox for horizontal arrangement of social icons -->
+                    <a href="https://www.instagram.com/_abdullahmansoor" target="_blank" class="p-2 border border-white rounded-full text-white hover:text-blue-700 transform hover:scale-110 transition-transform duration-300"> <!-- Instagram link with hover effects -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png" alt="Instagram" class="w-6 h-6"> <!-- Instagram icon -->
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdullah-mansoor-1838a4253/" target="_blank" class="p-2 border border-white rounded-full text-white hover:text-blue-700 transform hover:scale-110 transition-transform duration-300"> <!-- LinkedIn link with hover effects -->
+                        <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/original/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn" class="w-6 h-6"> <!-- LinkedIn icon -->
+                    </a>
+                    <a href="https://github.com" target="_blank" class="p-2 border border-white rounded-full text-white hover:text-blue-700 transform hover:scale-110 transition-transform duration-300"> <!-- GitHub link with hover effects -->
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-6 h-6"> <!-- GitHub icon -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Copyright Footer -->
+<footer class="mt-8 text-center"> <!-- Footer with top margin and centered text -->
+    <p class="text-gray-600 text-sm">&copy; 2024 Abdullah Mansoor. All rights reserved.</p> <!-- Footer text with subtle styling -->
+</footer>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Abdullah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        /* Responsive padding for optimal readability on all devices */
+        @media (max-width: 640px) { /* Mobile */
+            .contact-form {
+                padding: 16px;
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
+            .contact-form {
+                padding: 24px;
+            }
+        }
+        
+        @media (min-width: 1025px) { /* Desktop */
+            .contact-form {
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-300 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-4">
+        <header class="flex items-center justify-between animate-fadeIn">
+            <div class="flex items-center space-x-2">
+                <!-- Blue circle enhances visual identity -->
+                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                <span class="text-xl font-bold text-gray-800">Abdullah Mansoor</span>
+            </div>
+            <!-- Flexbox ensures navigation is responsive and easy to use -->
+            <nav class="flex flex-wrap justify-center space-x-4">
+                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Home</a>
+                <a href="profile.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Profile</a>
+                <a href="goals.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Career Goals</a>
+                <a href="projects.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Projects</a>
+                <a href="skills.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Skills & Interests</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Centralized content improves readability and focus -->
+        <div class="space-y-4">
+            <h1 class="text-4xl font-bold text-gray-800 text-center">Contact Me</h1>
+            <p class="text-gray-700 text-center">Feel free to reach out with any questions or comments!</p>
+
+            <!-- Flexibly styled form for a user-friendly experience -->
+            <form class="bg-gradient-to-r from-purple-400 to-blue-400 rounded-lg p-6 shadow-md max-w-lg mx-auto space-y-4 contact-form">
+                <div>
+                    <label for="name" class="block text-white">Name</label>
+                    <input type="text" id="name" class="border rounded-lg w-full p-2" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-white">Email</label>
+                    <input type="email" id="email" class="border rounded-lg w-full p-2" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-white">Message</label>
+                    <textarea id="message" rows="4" class="border rounded-lg w-full p-2" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 ease-in-out">Send Message</button>
+            </form>
+
+            <!-- Centered social links enhance connectivity and accessibility -->
+            <div class="text-center mt-6">
+                <h2 class="text-2xl font-bold text-gray-800">Connect with Me</h2>
+                <div class="flex justify-center space-x-4 mt-2">
+                    <a href="https://www.instagram.com/_abdullahmansoor" target="_blank" class="text-blue-600 hover:text-blue-700">Instagram</a>
+                    <a href="https://www.linkedin.com/in/abdullah-mansoor-1838a4253/" target="_blank" class="text-blue-600 hover:text-blue-700">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" class="text-blue-600 hover:text-blue-700">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Simple, centered footer maintains focus and readability -->
+        <footer class="mt-8 text-center">
+            <p class="text-gray-600 text-sm">&copy; 2024 Abdullah Mansoor. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

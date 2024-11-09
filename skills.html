@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Interests | Abdullah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        /* Media queries for responsive design */
+        @media (max-width: 640px) { /* Mobile */
+            nav {
+                display: block; /* Stack navigation links vertically on mobile */
+                text-align: center; /* Center align navigation for better aesthetics */
+            }
+            nav a {
+                display: block; /* Each link takes full width for easier tapping */
+                margin: 5px 0; /* Add spacing between links */
+            }
+            h1 {
+                font-size: 1.5rem; /* Reduce heading size on smaller screens */
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
+            h1 {
+                font-size: 2.5rem; /* Medium heading size for tablets */
+            }
+        }
+
+        @media (min-width: 1025px) { /* Desktop */
+            h1 {
+                font-size: 3rem; /* Larger heading size for desktops */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-300 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-4"> <!-- Centers content and adds vertical spacing -->
+        <header class="flex items-center justify-between animate-fadeIn"> <!-- Flexbox for horizontal alignment and spacing -->
+            <div class="flex items-center space-x-2"> <!-- Flexbox for logo and name alignment -->
+                <div class="w-6 h-6 bg-blue-500 rounded-full"></div> <!-- Decorative blue circle for branding -->
+                <span class="text-xl font-bold text-gray-800">Abdullah Mansoor</span> <!-- Site title with bold styling -->
+            </div>
+            <!-- Consistent navigation bar across all pages -->
+            <nav class="flex flex-wrap justify-center space-x-4"> <!-- Flexbox for responsive navigation layout -->
+                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Home</a>
+                <a href="profile.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Profile</a>
+                <a href="goals.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Career Goals</a>
+                <a href="projects.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Projects</a>
+                <a href="skills.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Skills & Interests</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Skills & Interests Content -->
+        <div class="space-y-4"> <!-- Adds vertical spacing between sections -->
+            <h1 class="text-4xl font-bold text-gray-800 text-center">Skills & Interests</h1> <!-- Main heading centered for focus -->
+
+            <!-- Skills Section with Gradient Background -->
+            <div class="space-y-4 p-6 rounded-lg bg-gradient-to-r from-purple-400 to-blue-400"> <!-- Container with padding, rounded corners, and gradient for visual appeal -->
+                <h2 class="text-2xl font-bold text-white">Technical Skills</h2> <!-- Subheading for clarity -->
+                <div class="space-y-2"> <!-- Adds spacing between individual skills -->
+                    
+                    <div>
+                        <span class="text-gray-200">JavaScript</span> <!-- Skill name -->
+                        <div class="w-full bg-gray-200 rounded-full h-2"> <!-- Background bar for skill level -->
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 80%;"></div> <!-- Filled bar indicating proficiency -->
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <span class="text-gray-200">React</span>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <span class="text-gray-200">Node.js</span>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <span class="text-gray-200">Java</span>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <span class="text-gray-200">CSS</span>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interests Section with Different Gradient Background -->
+            <div class="space-y-4 p-6 rounded-lg bg-gradient-to-r from-green-400 to-teal-400"> <!-- Container with distinct gradient for variety -->
+                <h2 class="text-2xl font-bold text-white">Interests</h2> <!-- Subheading for interests -->
+                <ul class="list-disc pl-5 text-gray-200"> <!-- Unordered list with disc bullets and padding for readability -->
+                    <li>Web Development</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Open Source Contributions</li>
+                    <li>Travel and Culture</li>
+                    <li>Photography</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Copyright Footer -->
+<footer class="mt-8 text-center"> <!-- Footer with top margin and centered text -->
+    <p class="text-gray-600 text-sm">&copy; 2024 Abdullah Mansoor. All rights reserved.</p> <!-- Subtle and readable footer text -->
+</footer>
+</html>

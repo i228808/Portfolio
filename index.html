@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+
+        /* Responsive styles for different devices */
+        @media (max-width: 640px) { /* Mobile */
+            nav {
+                display: block; /* Stack navigation links vertically */
+                text-align: center; /* Center align navigation */
+            }
+            header nav a {
+                display: block; /* Each link occupies full width */
+                margin: 5px 0; /* Spacing between links */
+            }
+            h1 {
+                font-size: 1.5rem; /* Smaller heading on mobile */
+            }
+            h2 {
+                font-size: 1.25rem; /* Smaller subheadings on mobile */
+            }
+            .grid {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
+            h1 {
+                font-size: 2.5rem; /* Medium heading on tablets */
+            }
+            h2 {
+                font-size: 1.75rem; /* Medium subheadings on tablets */
+            }
+        }
+
+        @media (min-width: 1025px) { /* Desktop */
+            h1 {
+                font-size: 3rem; /* Larger heading on desktops */
+            }
+            h2 {
+                font-size: 2rem; /* Larger subheadings on desktops */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-300 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-4">
+        <header class="flex items-center justify-between animate-fadeIn">
+            <div class="flex items-center space-x-2">
+                <!-- Blue circle for branding -->
+                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                <!-- Site title with bold text -->
+                <span class="text-xl font-bold text-gray-800">Abdullah Mansoor</span>
+            </div>
+            <!-- Navigation bar with flex layout for responsiveness -->
+            <nav class="flex flex-wrap justify-center space-x-4">
+                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Home</a>
+                <a href="profile.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Profile</a>
+                <a href="goals.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Career Goals</a>
+                <a href="projects.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Projects</a>
+                <a href="skills.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Skills & Interests</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main content grid for layout flexibility -->
+        <div class="grid md:grid-cols-2 gap-4">
+            <!-- Bio and introduction section with slide-in animation -->
+            <div class="bg-gradient-to-br from-teal-100 to-blue-100 p-6 rounded-lg animate-slideIn flex flex-col justify-between h-full">
+                <div>
+                    <!-- Main heading with bold styling -->
+                    <h1 class="text-4xl font-bold mb-4 text-gray-800">Hi, I'm Abdullah Mansoor</h1>
+                    <!-- Introduction paragraphs for user engagement -->
+                    <p class="text-gray-700 mb-6">
+                        I'm a Software Engineer with experience in web development, specializing in the MERN stack and Spring Boot. 
+                        As a full-stack developer, I am proficient in Java, C++, JavaScript, HTML, CSS, SQL, Software Testing, and Software Architecture.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        I’m passionate about creating web solutions that solve real-world problems, and I have worked on projects like an online doctor consultation platform and a hostel-finding app for students.
+                    </p>
+                </div>
+                <div class="space-y-4 mt-4">
+                    <!-- Contact button with hover and transform effects for interactivity -->
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transform hover:scale-105 transition-transform duration-300">Contact me</button>
+                    <!-- Social media links with hover and transform effects for better user interaction -->
+                    <div class="flex space-x-4">
+                        <!-- Instagram Icon Link -->
+                        <a href="https://www.instagram.com/_abdullahmansoor" target="_blank" class="p-2 border border-white rounded-full text-white hover:text-blue-700 transform hover:scale-110 transition-transform duration-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png" alt="Instagram" class="w-6 h-6">
+                        </a>
+                        <!-- LinkedIn Icon Link -->
+                        <a href="https://www.linkedin.com/in/abdullah-mansoor-1838a4253/" target="_blank" class="p-2 border border-white rounded-full text-white hover:text-blue-700 transform hover:scale-110 transition-transform duration-300">
+                            <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/original/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn" class="w-6 h-6">
+                        </a>
+                        <!-- GitHub Icon Link -->
+                        <a href="https://github.com" target="_blank" class="p-2 border border-gray-300 rounded-full text-blue-600 hover:text-blue-700 transform hover:scale-110 transition-transform duration-300">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile image section with pop-in animation -->
+            <div class="bg-gray-300 rounded-lg overflow-hidden animate-popIn">
+                <img src="profilephoto.jpg" alt="Abdullah Mansoor Portrait" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <!-- Projects showcase grid for organized display -->
+        <div class="grid md:grid-cols-2 gap-4">
+            <!-- Project 1: Health Line -->
+            <div class="bg-blue-500 rounded-lg overflow-hidden animate-popIn">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <!-- Project title with bold styling -->
+                        <h2 class="text-2xl font-bold text-white">Health Line</h2>
+                    </div>
+                    <!-- Project description with lighter text color -->
+                    <p class="text-blue-100">An online doctor consultation platform offering seamless healthcare solutions.</p>
+                </div>
+                <!-- Project image with object-cover for proper scaling -->
+                <img src="https://www.freeiconspng.com/thumbs/heart-icon/valentine-heart-icon-6.png" alt="Health Line Project Screenshot" class="w-full h-auto object-cover rounded-t-lg">
+            </div>
+            <!-- Project 2: Sab Dhoondo -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden animate-popIn">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <!-- Project title with bold styling -->
+                        <h2 class="text-2xl font-bold text-white">Sab Dhoondo</h2>
+                    </div>
+                    <!-- Project description with lighter text color -->
+                    <p class="text-gray-400">A hostel finding app for students, making student accommodation searches hassle-free.</p>
+                </div>
+                <!-- Project image with object-cover for proper scaling -->
+                <img src="https://cdn-icons-png.freepik.com/512/602/602275.png" alt="Sab Dhoondo Project Screenshot" class="w-full h-auto object-cover rounded-t-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="mt-8 text-center">
+        <p class="text-gray-600 text-sm">&copy; 2024 Abdullah Mansoor. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Abdullah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        /* Media queries for responsive design */
+        @media (max-width: 640px) { /* Mobile */
+            nav {
+                display: block; /* Stack navigation links vertically */
+                text-align: center; /* Center align navigation */
+            }
+            header nav a {
+                display: block; /* Each link occupies full width */
+                margin: 5px 0; /* Spacing between links */
+            }
+            .grid {
+                grid-template-columns: 1fr; /* Single column layout on mobile */
+            }
+            h1 {
+                font-size: 1.5rem; /* Smaller heading on mobile */
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
+            .grid {
+                grid-template-columns: repeat(2, 1fr); /* Two-column layout on tablets */
+            }
+            h1 {
+                font-size: 2.5rem; /* Medium heading on tablets */
+            }
+        }
+
+        @media (min-width: 1025px) { /* Desktop */
+            .grid {
+                grid-template-columns: repeat(3, 1fr); /* Three-column layout on desktops */
+            }
+            h1 {
+                font-size: 3rem; /* Larger heading on desktops */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-300 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-4"> <!-- Centers content and adds vertical spacing -->
+        <header class="flex items-center justify-between animate-fadeIn"> <!-- Flexbox for horizontal alignment and spacing -->
+            <div class="flex items-center space-x-2"> <!-- Flexbox for logo and name alignment -->
+                <div class="w-6 h-6 bg-blue-500 rounded-full"></div> <!-- Decorative blue circle for branding -->
+                <span class="text-xl font-bold text-gray-800">Abdullah Mansoor</span> <!-- Site title with bold styling -->
+            </div>
+            <!-- Consistent navigation bar across all pages -->
+            <nav class="flex flex-wrap justify-center space-x-4"> <!-- Flexbox for responsive navigation layout -->
+                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Home</a>
+                <a href="profile.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Profile</a>
+                <a href="goals.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Career Goals</a>
+                <a href="projects.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Projects</a>
+                <a href="skills.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Skills & Interests</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Projects Content -->
+        <div class="space-y-4"> <!-- Adds vertical spacing between elements -->
+            <h1 class="text-4xl font-bold text-gray-800 text-center">Projects</h1> <!-- Main heading centered -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> <!-- Responsive grid layout -->
+                <div class="p-4 rounded-lg shadow-lg bg-gradient-to-r from-blue-400 to-blue-200"> <!-- Project card with padding, rounded corners, shadow, and gradient background -->
+                    <img src="https://www.freeiconspng.com/thumbs/heart-icon/valentine-heart-icon-6.png" alt="Health Line" class="w-full h-auto object-cover rounded-t-lg"> <!-- Project image with full width and rounded top corners -->
+                    <h2 class="text-2xl font-bold text-gray-800 mt-2">Health Line</h2> <!-- Project title with margin-top -->
+                    <p class="text-gray-700">An online doctor consultation platform offering seamless healthcare solutions.</p> <!-- Project description -->
+                    <div class="flex flex-wrap mt-2"> <!-- Flexbox for technology tags with wrapping -->
+                        <span class="bg-blue-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">React</span> <!-- Technology tag -->
+                        <span class="bg-green-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Node.js</span>
+                        <span class="bg-yellow-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Express</span>
+                        <span class="bg-gray-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MongoDB</span>
+                    </div>
+                </div>
+                <div class="p-4 rounded-lg shadow-lg bg-gradient-to-r from-blue-400 to-blue-200">
+                    <img src="https://cdn-icons-png.freepik.com/512/602/602275.png" alt="Sab Dhoondo" class="w-full h-auto object-cover rounded-t-lg">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-2">Sab Dhoondo</h2>
+                    <p class="text-gray-700">A hostel finding app for students, making accommodation searches hassle-free.</p>
+                    <div class="flex flex-wrap mt-2">
+                        <span class="bg-blue-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">React Native</span>
+                        <span class="bg-yellow-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Firebase</span>
+                    </div>
+                </div>
+                <div class="p-4 rounded-lg shadow-lg bg-gradient-to-r from-blue-400 to-blue-200">
+                    <img src="https://static.vecteezy.com/system/resources/previews/018/931/503/original/coffee-cup-icon-png.png" alt="Cafeteria Management App" class="w-full h-auto object-cover rounded-t-lg">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-2">Cafeteria Management App</h2>
+                    <p class="text-gray-700">A web application for managing cafeteria operations, including order management and inventory tracking.</p>
+                    <div class="flex flex-wrap mt-2">
+                        <span class="bg-red-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Angular</span>
+                        <span class="bg-gray-700 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Spring Boot</span>
+                        <span class="bg-blue-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MySQL</span>
+                    </div>
+                </div>
+                <div class="p-4 rounded-lg shadow-lg bg-gradient-to-r from-blue-400 to-blue-200">
+                    <img src="https://cdn-icons-png.freepik.com/512/10026/10026257.png" alt="Personal Blog" class="w-full h-auto object-cover rounded-t-lg">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-2">Personal Blog</h2>
+                    <p class="text-gray-700">A personal blog where I share insights on technology and web development.</p>
+                    <div class="flex flex-wrap mt-2">
+                        <span class="bg-purple-500 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">WordPress</span>
+                        <span class="bg-blue-700 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PHP</span>
+                        <span class="bg-gray-600 text-white text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Copyright Footer -->
+    <footer class="mt-8 text-center"> <!-- Footer with top margin and centered text -->
+        <p class="text-gray-600 text-sm">&copy; 2024 Abdullah Mansoor. All rights reserved.</p> <!-- Footer text with subtle styling -->
+    </footer>
+</html>

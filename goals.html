@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Goals | Abdullah's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+
+        /* Responsive styles for different devices */
+        @media (max-width: 640px) { /* Mobile */
+            nav {
+                display: block; /* Stack navigation links vertically */
+                text-align: center;
+            }
+            nav a {
+                display: block; /* Each link occupies full width */
+                margin: 5px 0; /* Spacing between links */
+            }
+            .space-y-4 h1 {
+                font-size: 2rem; /* Smaller heading on mobile */
+            }
+            .space-y-4 h2 {
+                font-size: 1.5rem; /* Smaller subheadings on mobile */
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
+            .space-y-4 h1 {
+                font-size: 3rem; /* Medium heading on tablets */
+            }
+            .space-y-4 h2 {
+                font-size: 2rem; /* Medium subheadings on tablets */
+            }
+        }
+
+        @media (min-width: 1025px) { /* Desktop */
+            .space-y-4 h1 {
+                font-size: 4rem; /* Larger heading on desktops */
+            }
+            .space-y-4 h2 {
+                font-size: 2.5rem; /* Larger subheadings on desktops */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 via-blue-100 to-blue-300 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto space-y-4">
+        <header class="flex items-center justify-between animate-fadeIn">
+            <div class="flex items-center space-x-2">
+                <!-- Blue circle for branding -->
+                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                <span class="text-xl font-bold text-gray-800">Abdullah Mansoor</span>
+            </div>
+            <!-- Navigation bar for easy access -->
+            <nav class="flex flex-wrap justify-center space-x-4">
+                <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Home</a>
+                <a href="profile.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Profile</a>
+                <a href="goals.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Career Goals</a>
+                <a href="projects.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Projects</a>
+                <a href="skills.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Skills & Interests</a>
+                <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Career Goals Content -->
+        <div class="space-y-4">
+            <h1 class="text-4xl font-bold text-gray-800 text-center">Career Goals</h1>
+            
+            <!-- Short-Term Goals Section -->
+            <div class="space-y-4 p-6 rounded-lg bg-gradient-to-r from-blue-400 to-blue-200">
+                <h2 class="text-3xl font-bold text-white">Short-Term Goals</h2>
+                <ul class="list-disc space-y-2 text-white pl-5">
+                    <li>Master front-end technologies like React and Angular.</li>
+                    <li>Contribute to 100 open-source projects by year-end.</li>
+                    <li>Start learning back-end development with Node.js and Express.</li>
+                    <li>Achieve AWS certification to enhance cloud skills.</li>
+                    <li>Attend five industry conferences or workshops for networking and skills development.</li>
+                </ul>
+            </div>
+
+            <!-- Long-Term Goals Section -->
+            <div class="space-y-4 p-6 rounded-lg bg-gradient-to-r from-green-400 to-green-200">
+                <h2 class="text-3xl font-bold text-white">Long-Term Goals</h2>
+                <ul class="list-disc space-y-2 text-white pl-5">
+                    <li>Lead innovative projects focusing on AI and machine learning in a top tech company.</li>
+                    <li>Found a tech startup that simplifies software solutions for everyday tasks.</li>
+                    <li>Develop sustainable technology projects in the fields of clean energy and resource management.</li>
+                    <li>Become an adjunct professor teaching software development and emerging tech trends.</li>
+                    <li>Expand technology access in emerging markets, making a significant global impact.</li>
+                </ul>
+            </div>
+
+            <!-- Call to Action with Quote -->
+            <div class="text-center mt-6 p-4 bg-gradient-to-r from-purple-500 to-purple-300 rounded-lg shadow-xl">
+                <p class="text-white text-lg font-bold">
+                    "Innovation distinguishes between a leader and a follower." - Steve Jobs
+                </p>
+                <a href="contact.html" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out">
+                    Connect with Me
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="mt-8 text-center">
+        <p class="text-gray-600 text-sm">&copy; 2024 Abdullah Mansoor. All rights reserved.</p>
+    </footer>
+</body>
+</html>
