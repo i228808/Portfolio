@@ -39,8 +39,9 @@ const CustomCursor: React.FC = () => {
         }}
         transition={{
           type: "spring",
-          stiffness: 500,
-          damping: 28,
+          stiffness: 1000,
+          damping: 30,
+          mass: 0.1,
         }}
       />
       <motion.div
@@ -52,8 +53,9 @@ const CustomCursor: React.FC = () => {
         }}
         transition={{
           type: "spring",
-          stiffness: 250,
-          damping: 20,
+          stiffness: 800,
+          damping: 25,
+          mass: 0.1,
         }}
       />
     </>

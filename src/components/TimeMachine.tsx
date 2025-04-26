@@ -40,11 +40,12 @@ const TimeMachine: React.FC = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleYearChange = (year: number) => {
+    if (year === selectedYear) return;
     setIsTransitioning(true);
+    setSelectedYear(year);
     setTimeout(() => {
-      setSelectedYear(year);
       setIsTransitioning(false);
-    }, 500);
+    }, 300);
   };
 
   const currentVersion = versions.find(v => v.year === selectedYear);
@@ -70,7 +71,7 @@ const TimeMachine: React.FC = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
           >
             <div className="p-4 border-b border-accent/20">
               <h3 className="text-lg font-semibold gradient-text">
@@ -105,7 +106,7 @@ const TimeMachine: React.FC = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-neon-blue/20" />

@@ -35,7 +35,7 @@ const Home: React.FC = () => {
           className="space-y-8"
         >
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Software Engineering Student & Developer
+            Software Engineer & Developer
           </h1>
           
           <p className="text-lg md:text-xl text-text/80 max-w-3xl mx-auto">
