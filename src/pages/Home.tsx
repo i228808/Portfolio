@@ -92,7 +92,7 @@ const Home: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="projects"
+              href="#projects"
               className="px-6 py-3 bg-accent text-white rounded-full font-medium"
             >
               View Projects
@@ -100,7 +100,7 @@ const Home: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="contact"
+              href="#contact"
               className="px-6 py-3 bg-secondary/50 text-text rounded-full font-medium border border-accent/10"
             >
               Contact Me
