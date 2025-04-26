@@ -1,51 +1,8 @@
 import { motion } from 'framer-motion';
-import { useState, FormEvent, ChangeEvent } from 'react';
-
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    
-    fetch('https://formspree.io/f/xnndnbqk', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('Message sent successfully!');
-        form.reset();
-      } else {
-        throw new Error('Network response was not ok');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('There was a problem sending your message. Please try again.');
-    });
-  };
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [state, handleSubmit] = useForm("xnndnbqk");
 
   return (
     <div className="section">
@@ -90,10 +47,13 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 bg-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
                     required
+                  />
+                  <ValidationError 
+                    prefix="Name" 
+                    field="name"
+                    errors={state.errors}
                   />
                 </div>
 
@@ -105,10 +65,13 @@ const Contact: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 bg-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
                     required
+                  />
+                  <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
                   />
                 </div>
 
@@ -119,17 +82,29 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-2 bg-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
                     required
                   ></textarea>
+                  <ValidationError 
+                    prefix="Message" 
+                    field="message"
+                    errors={state.errors}
+                  />
                 </div>
 
-                <button type="submit" className="btn btn-primary">
-                  Send Message
+                <button 
+                  type="submit" 
+                  disabled={state.submitting}
+                  className="btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {state.submitting ? 'Sending...' : 'Send Message'}
                 </button>
+                {state.succeeded && (
+                  <p className="text-green-500 mt-4">
+                    Thanks for your message! I'll get back to you soon.
+                  </p>
+                )}
               </form>
             </div>
           </div>
